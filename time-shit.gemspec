@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = %q{}
   s.description = %q{}
 
+  s.add_development_dependency('mocha')
+
   s.rubyforge_project = "time-shit"
 
   s.files         = `git ls-files`.split("\n")
