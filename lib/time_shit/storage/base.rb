@@ -1,3 +1,6 @@
+require 'date'
+require 'time'
+
 module TimeShit
   module Storage
     class Base
@@ -8,6 +11,23 @@ module TimeShit
 
       def save
         false
+      end
+
+      def name
+        @time.strftime( "%Y_%m_timeshit" )
+      end
+
+      def sheet
+      end
+
+      def header
+        %w(Date Start End)
+      end
+
+      def get( key )
+      end
+
+      def set( key, opts = { :start => Time.now } )
       end
 
     end
