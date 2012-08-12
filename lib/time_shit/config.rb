@@ -2,7 +2,10 @@ module TimeShit
   class Config
 
     def default
-      { :container => lambda{ File.join( Dir.home, "time-shit" ) }.call }
+      { 
+        :container => lambda{ File.join( Dir.home, "time-shit" ) }.call,
+        :round => (15*60)
+      }
     end
 
     def self.method_missing( method_name, *args )
